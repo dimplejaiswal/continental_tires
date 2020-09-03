@@ -1,0 +1,14 @@
+.stock {
+  display: inline-block;
+}
+.warningTxt, .noStockTxt {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.noStockTxt {
+    color: #8E1216;
+}
+.icon {
+padding:0 2px;
+}

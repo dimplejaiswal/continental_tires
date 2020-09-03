@@ -1,0 +1,30 @@
+.heading {
+    border-bottom: 2px solid #000;
+    text-align: left;
+    margin: 0;
+}
+.listHeading {
+    font-size: 16px;
+    width: 146px;
+}
+.cardHeading {
+    font-size: 24px;
+    padding-top: 12px;
+    display: inline-block;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cardHeading {
+        font-size: 20px;
+    }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+    .cardHeading {
+        font-size: 16px;
+    }
+    .listHeading {
+        width: 100%;
+        display: inline;
+    }
+
+}

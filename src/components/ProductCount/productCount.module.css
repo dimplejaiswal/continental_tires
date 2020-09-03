@@ -1,0 +1,23 @@
+.container {
+    height: 40px;
+    width: 120px;
+    display: inline-flex;
+}
+
+.counterBtn {
+    border: 1px solid #f4f4f4;
+    background: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.counterVal {
+    background-color: #E0E0E0;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+}

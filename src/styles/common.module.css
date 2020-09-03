@@ -1,0 +1,18 @@
+.listItem {
+    display: inline-block;
+    margin-right: 15px;
+    width: 100px;
+    flex-grow: 1;
+    text-align: center;
+}
+.cardItems {
+    /* display: inline-flex;
+    justify-content: center;
+    flex-flow: column;
+    justify-content: center; */
+    flex-direction: column;
+    padding-right: 20px;
+}
+.stockPrice {
+
+}

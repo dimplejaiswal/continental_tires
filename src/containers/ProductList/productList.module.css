@@ -1,0 +1,29 @@
+.productList {
+    max-width: 1366px;
+    background-color: #F4F4F4;
+    margin: auto;
+}
+.container {
+    padding: 0 30px;
+}
+.heading {
+    font-size: 28px;
+    color: 000;
+}
+.cardItem {
+    display: flex;
+}
+.listItems {
+    display: block;
+    margin:15px 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .listItems {
+        display: block;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}

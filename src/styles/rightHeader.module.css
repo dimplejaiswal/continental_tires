@@ -1,0 +1,19 @@
+.rightHeader {
+    display: flex;
+    list-style: none;
+    float: right;
+    padding-left:0;
+    margin-right: 16px;
+}
+.icon {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+
+}
+.itemText {
+    color: #9C9D9D;
+    font-size: 14px;
+    margin: 0;
+}

@@ -1,0 +1,28 @@
+.badge {
+    background-color: #FFA500;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    top: -12px;
+    padding: 4px 16px;
+}
+.imgBox {
+    padding: 0 15px;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+.img {
+    width: 100%;
+}
+.aeIcon {
+    position: absolute;
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+   .imgBox {
+       
+   } 
+}

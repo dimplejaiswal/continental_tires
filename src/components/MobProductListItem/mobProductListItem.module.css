@@ -1,0 +1,16 @@
+@media (min-width: 375px) and (max-width: 768px) {
+    .mobProductListItem {
+        height: 158px;
+        width: 48%;
+        background-color: #fff;
+        padding: 12px;
+        margin: 1%;
+        box-sizing: border-box;
+    }
+    .lhsProdList {
+
+    }
+    .rhsProdList {
+
+    }
+}
