@@ -19,10 +19,17 @@
 }
 .aeIcon {
     position: absolute;
+    top: 15px;
+    right: -8px;
 }
 
-@media (min-width: 376px) and (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 768px) {
    .imgBox {
-       
+        width: 30%;
+        margin-right: 4%;
+        box-sizing: border-box;
    } 
+   .badge {
+       font-size: 12px;
+   }
 }

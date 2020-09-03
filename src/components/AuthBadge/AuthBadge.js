@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './authBadge.module.css';
 
 const AuthBadge = ( props ) => (
-    <div className={`${props.modifier}`}>
-        <img src={props.authBadge} alt='Auth Badge' />
+    <div className={`${styles.badge} ${props.modifier}`}>
+        <img src={props.authBadge} className={styles.badgeImage} alt='Auth Badge' />
     </div>
 );
    

@@ -3,5 +3,9 @@ export function isTabAndMobile() {
 }
 
 export function isTabLandscape() {
-    return window.innerWidth >= 991 && window.innerWidth <= 1024;
+    return window.innerWidth > 991 && window.innerWidth <= 1024;
+}
+
+export function isMobile() {
+    return window.innerWidth <= 767;
 }

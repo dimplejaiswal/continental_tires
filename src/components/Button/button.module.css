@@ -7,6 +7,11 @@
     padding: 6px;
     border-radius: 20px;
 }
+.notifymeBtn {
+    border: 2px solid #FFA500;
+    background-color: #fff;
+    color: #000;
+}
 
 .addToCartBtn {
     background-color: #FFA500;

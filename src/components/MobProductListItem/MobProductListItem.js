@@ -17,33 +17,35 @@ const MobProductListItem = (props) => {
                 <Heading
                     prodHeading='listHeading'
                     productNameHeading={props.prodName}
-                    modifier={common[props.listItem]}
                 />
-                <AuthBadge
-                    authBadge={props.authImg}
-                    modifier={common[props.listItem]}
-                />
-                <Stock
-                    prodStock={props.stock}
-                    modifier={common[props.listItem]}
-                />
-                <ProductCount
-                    modifier={common[props.listItem]}
-                />
+                <div className={styles.firstRow}>
+                    <AuthBadge
+                        authBadge={props.authImg}
+                        modifier={common.cardItems}
+                    />
+                    <Stock
+                        prodStock={props.stock}
+                    />
+                </div>
             </div>
             <div className={styles.rhsProdList}>
                 <ProductModal
                     prodType={props.type}
                     prodModal={props.modal}
                     textAlg='textAlg'
-                    modifier={common[props.listItem]}
+                    modifier={common.cardItems}
                 />
-                <Price
-                    prodPrice = {props.price}
-                />
-                <TotalPrice
-
-                />
+                <div className={styles.firstRow}>
+                    <Price
+                        prodPrice = {props.price}
+                    />
+                    <TotalPrice
+                        prodTotalPrice={props.totalPrice}
+                    />
+                </div>
+            </div>
+            <div className={styles.bottom}>
+                <ProductCount />
                 <AddToCart
                     stock={props.stock}
                     showText={true}

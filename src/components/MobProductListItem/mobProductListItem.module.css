@@ -1,16 +1,48 @@
-@media (min-width: 375px) and (max-width: 768px) {
+.mobProductListItem {
+    min-height: 158px;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 12px;
+    margin: 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.lhsProdList {
+    width: 46%;
+    margin-right: 4%;
+}
+.rhsProdList {
+    width: 46%;
+    margin-left: 4%;
+}
+
+.firstRow {
+    display: flex;
+    margin: 8px 0;
+}
+.bottom {
+    display: flex;
+}
+
+@media (min-width: 768px) {
     .mobProductListItem {
-        height: 158px;
         width: 48%;
-        background-color: #fff;
-        padding: 12px;
-        margin: 1%;
-        box-sizing: border-box;
     }
     .lhsProdList {
-
+        width: 49%;
+        margin-right: 0.5%;
     }
     .rhsProdList {
+        width: 49%;
+        margin-left: 0.5%;
+    }
+    
+}
 
+@media (max-width: 767px) {
+    .mobProductListItem {
+        margin: 15px 0;
     }
 }

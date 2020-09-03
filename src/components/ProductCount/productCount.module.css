@@ -10,8 +10,11 @@
     padding: 0;
     margin: 0;
     flex: 1;
+    cursor: pointer;
 }
-
+.counterBtn:focus {
+    outline: none;
+}
 .counterVal {
     background-color: #E0E0E0;
     font-weight: bold;

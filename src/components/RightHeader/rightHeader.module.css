@@ -17,3 +17,15 @@
     font-size: 14px;
     margin: 0;
 }
+
+@media (max-width:767px) {
+    .icon {
+        width: 40px;
+    }
+    .rightHeader {
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding-right: 16px ;
+    }
+}

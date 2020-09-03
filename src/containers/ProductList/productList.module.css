@@ -8,7 +8,7 @@
 }
 .heading {
     font-size: 28px;
-    color: 000;
+    color: #000;
 }
 .cardItem {
     display: flex;
@@ -17,8 +17,27 @@
     display: block;
     margin:15px 8px;
 }
-
-@media screen and (max-width: 768px) {
+@media (max-width: 767px) {
+    .container {
+        padding: 0 20px;
+    }
+    .cardItem {
+        overflow: scroll;
+        padding-top: 12px;
+    }
+    .heading {
+        font-size: 20px;
+    }
+    .listItems {
+        margin: 15px 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .cardItem {
+        display: flex;
+        flex-wrap: wrap;  
+        font-size: 14px;
+    }
     .listItems {
         display: block;
         height: 100%;

@@ -1,56 +1,57 @@
 import React from 'react';
 import ProductImage from '../ProductImage/ProductImage';
-import flatstyles from './productCardFlat.module.css';
-import stackedstyles from './productCardStacked.module.css';
-import Button from '../Button/Button';
+import styles from './mobProductCard.module.css';
 import ProductCount from '../ProductCount/ProductCount';
 import Heading from '../Heading/Heading';
 import ProductModal from '../ProductModal/ProductModal';
 import AuthBadge from '../AuthBadge/AuthBadge';
 import Stock from '../Stock/Stock';
 import TotalPrice from '../TotalPrice/TotalPrice';
+import common from '../../styles/common.module.css';
+import AddToCart from '../AddToCart/AddToCart';
+import Price from '../Price/Price';
 
 const MobProductCard = ( props ) => {
-    const styles = props.variant === 'stack' ? stackedstyles : flatstyles;
     return (
         <div className={styles.productCard} >
-                {props.variant === 'stack' && 
-                <ProductImage image={props.prodImage} badgeText={props.badgeText} />}
+                <ProductImage image={props.prodImage} badgeText={props.badgeText} />
                 <div className={styles.rhs}>
                     <Heading
                         productNameHeading={props.prodName}
                         prodHeading='cardHeading'
                     />
-                    <div className={styles.subDetails}>
+                    <div className={styles.firstRow}>
                         <AuthBadge
-                            listItem= 'cardItems'
+                            modifier={common.cardItems}
                             authBadge={props.authImg}
                         />
                         <ProductModal
                             prodType={props.type}
                             prodModal={props.modal}
                             textAlg='textAlg'
-                            listItem='cardItems'
+                            modifier={common.cardItems}
                         />
+                    </div>
+                    <div className={styles.middle}>
                         <Stock
                             prodStock={props.stock}
                             price={props.price}
-                            listItem='cardItems'
+                            modifier={common.cardItems}
                             badge ={props.badgeText}
                         />
+                        <Price prodPrice={props.price}/>
                         <TotalPrice
                             prodTotalPrice={props.totalPrice}
-                            listItem='cardItems'
+                            modifier={common.cardItems}
                         />
                     </div>
-                    <div className={styles.bottom}>
-                        <ProductCount />
-                        <Button
-                            btnCls = {props.stockQty}
-                            badgeTxt = {props.badgeText}
-                            text={props.btnText === 0 ? 'Notify Me!' : 'Add to Cart'}
-                        />
-                    </div>
+                </div>
+                <div className={styles.bottom}>
+                    <ProductCount />
+                    <AddToCart
+                        stock={props.stock}
+                        showText={true}
+                    />
                 </div>
         </div>
     )

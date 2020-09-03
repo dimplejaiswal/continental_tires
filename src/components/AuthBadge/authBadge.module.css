@@ -1,0 +1,13 @@
+.badge {
+    width: 65px;
+}
+
+@media (max-width:768px) {
+    .badge {
+        width: 38px;
+    }
+    .badgeImage {
+        width: 100%;
+    }
+}
+
