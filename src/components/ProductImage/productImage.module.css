@@ -32,4 +32,10 @@
    .badge {
        font-size: 12px;
    }
+   .aeIcon {
+       top: 0;
+   }
+   .aeLogoImg {
+       width: 28px;
+   }
 }

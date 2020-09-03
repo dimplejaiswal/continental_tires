@@ -10,7 +10,7 @@ const ProductImage = ({ image, badgeText }) => (
         </span>
         <div className={styles.imgBox}>
             <img className={styles.img} src={image} alt='Img'/>
-            <span className={styles.aeIcon}><img src={badgeLogo} alt='Txt'/></span>
+            <span className={styles.aeIcon}><img src={badgeLogo} className={styles.aeLogoImg}alt='Txt'/></span>
         </div>
     </>
 );
