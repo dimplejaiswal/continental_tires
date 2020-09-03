@@ -1,8 +1,7 @@
 import React from 'react';
-import common from '../../styles/common.module.css';
 
 const Price = (props) => (
-    <div className={common[props.listItem]}>
+    <div className={props.modifier}>
         Price ₪{props.prodPrice}
     </div>
 );

@@ -1,13 +1,14 @@
 import React from 'react';
 import ProductImage from '../ProductImage/ProductImage';
 import styles from './productCardStacked.module.css';
-import Button from '../Button/Button';
 import ProductCount from '../ProductCount/ProductCount';
 import Heading from '../Heading/Heading';
 import ProductModal from '../ProductModal/ProductModal';
 import AuthBadge from '../AuthBadge/AuthBadge';
 import Stock from '../Stock/Stock';
 import TotalPrice from '../TotalPrice/TotalPrice';
+import common from '../../styles/common.module.css';
+import AddToCart from '../AddToCart/AddToCart';
 
 const ProductCard = ( props ) => {
     return (
@@ -20,32 +21,31 @@ const ProductCard = ( props ) => {
                     />
                     <div className={styles.subDetails}>
                         <AuthBadge
-                            listItem= 'cardItems'
+                            modifier={common.cardItems}
                             authBadge={props.authImg}
                         />
                         <ProductModal
                             prodType={props.type}
                             prodModal={props.modal}
                             textAlg='textAlg'
-                            listItem='cardItems'
+                            modifier={common.cardItems}
                         />
                         <Stock
                             prodStock={props.stock}
                             price={props.price}
-                            listItem='cardItems'
+                            modifier={common.cardItems}
                             badge ={props.badgeText}
                         />
                         <TotalPrice
                             prodTotalPrice={props.totalPrice}
-                            listItem='cardItems'
+                            modifier={common.cardItems}
                         />
                     </div>
                     <div className={styles.bottom}>
                         <ProductCount />
-                        <Button
-                            btnCls = {props.stockQty}
-                            badgeTxt = {props.badgeText}
-                            text={props.btnText === 0 ? 'Notify Me!' : 'Add to Cart'}
+                        <AddToCart
+                            stock={props.stock}
+                            showText={true}
                         />
                     </div>
                 </div>

@@ -6,9 +6,9 @@ import Stock from '../Stock/Stock';
 import Price from '../Price/Price';
 import ProductCount from '../ProductCount/ProductCount';
 import TotalPrice from '../TotalPrice/TotalPrice';
-import Button from '../Button/Button';
+import AddToCart from '../AddToCart/AddToCart';
 import styles from './mobProductListItem.module.css';
-
+import common from '../../styles/common.module.css';
 
 const MobProductListItem = (props) => {
     return  (
@@ -17,18 +17,18 @@ const MobProductListItem = (props) => {
                 <Heading
                     prodHeading='listHeading'
                     productNameHeading={props.prodName}
-                    listItem='listItem'
+                    modifier={common[props.listItem]}
                 />
                 <AuthBadge
                     authBadge={props.authImg}
-                    listItem='listItem'
+                    modifier={common[props.listItem]}
                 />
                 <Stock
                     prodStock={props.stock}
-                    listItem='listItem'
+                    modifier={common[props.listItem]}
                 />
                 <ProductCount
-                    listItem='listItem'
+                    modifier={common[props.listItem]}
                 />
             </div>
             <div className={styles.rhsProdList}>
@@ -36,20 +36,17 @@ const MobProductListItem = (props) => {
                     prodType={props.type}
                     prodModal={props.modal}
                     textAlg='textAlg'
-                    listItem='listItem'
+                    modifier={common[props.listItem]}
                 />
                 <Price
                     prodPrice = {props.price}
-                    listItem='stockPrice'
                 />
                 <TotalPrice
 
                 />
-                <Button
-                    btnCls = {props.stock}
-                    text={props.btnText === 0 ? 'Notify Me!' : 'Add to Cart'}
-                    listItem='listItem'
-                    badgeTxt ={props.badgeText}
+                <AddToCart
+                    stock={props.stock}
+                    showText={true}
                 />
             </div>
         </div>

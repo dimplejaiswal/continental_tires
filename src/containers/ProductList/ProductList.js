@@ -5,6 +5,8 @@ import LoadMore from '../../components/LoadMore/LoadMore';
 import styles from './productList.module.css';
 import DATA from '../../data/data.js';
 import ProductListItem from '../../components/ProductListItem/ProductListItem';
+import MobProductListItem from '../../components/MobProductListItem/MobProductListItem';
+import { isTabAndMobile } from '../../utils/utils';
 
 class ProductList extends Component {
     state = {
@@ -25,6 +27,7 @@ class ProductList extends Component {
 
     render() {
         const { stack, flat } = this.getStackAndFlatList();
+        const ListComponent = isTabAndMobile() ? MobProductListItem : ProductListItem;
         return (
             <div className={styles.productList}>
                 <Header />
@@ -56,7 +59,7 @@ class ProductList extends Component {
                         {
                             flat.map((item, i) => {
                                 return ( 
-                                    <ProductListItem 
+                                    <ListComponent 
                                         prodName = {item.productName}
                                         authImg = {item.thumbnail2}
                                         type = {item.type}
@@ -64,8 +67,6 @@ class ProductList extends Component {
                                         stock = {item.inStock}
                                         price = {item.actualPrice}
                                         totalPrice ={item.actualPrice}
-                                        stock={item.inStock}
-                                        btnText={item.inStock}
                                         badgeTxt = {item.badgeText}
                                     />
                                 )

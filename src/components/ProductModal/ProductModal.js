@@ -1,9 +1,8 @@
 import React from 'react';
-import common from '../../styles/common.module.css';
 import styles from './productModal.module.css';
 
 const ProductModal = (props) => (
-    <div className={`${common[props.listItem]} ${styles[props.textAlg]}`}>
+    <div className={`${styles[props.textAlg]} ${props.modifier}`}>
         <div>
             {props.prodType}
         </div>

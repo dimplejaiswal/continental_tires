@@ -1,7 +1,7 @@
-export function isMobile() {
-    return window.innerWidth < 992;
+export function isTabAndMobile() {
+    return window.innerWidth <= 768;
 }
 
-export function isTab() {
-    return window.innerWidth < 1025;
+export function isTabLandscape() {
+    return window.innerWidth >= 991 && window.innerWidth <= 1024;
 }

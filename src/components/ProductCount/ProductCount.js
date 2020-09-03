@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './productCount.module.css';
-import common from '../../styles/common.module.css';
 
 class ProductCount extends React.Component{
     state = { count: 1 };
@@ -11,7 +10,7 @@ class ProductCount extends React.Component{
 
     render() {
         return (
-            <div class={`${styles.container} ${common[this.props.listItem]}`}>
+            <div class={`${styles.container}`}>
                 <button className={styles.counterBtn} onClick={this.decrement}>-</button>
                 <span className={styles.counterVal}>{this.state.count}</span>
                 <button className={styles.counterBtn} onClick={this.increment}>+</button>
