@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductImage from '../ProductImage/ProductImage';
-import styles from './productCardStacked.module.css';
+import styles from './productCard.module.css';
 import ProductCount from '../ProductCount/ProductCount';
 import Heading from '../Heading/Heading';
 import ProductModal from '../ProductModal/ProductModal';
